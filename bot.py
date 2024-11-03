@@ -114,6 +114,11 @@ def get_buttons_for_options(user_options: int):
         buttons.append([InlineKeyboardButton(text, f"options_{option.value}")])
     return InlineKeyboardMarkup(buttons)
 
+api_id = os.getenv('API_ID')
+api_hash = os.getenv('API_HASH')
+bot_token = os.getenv('BOT_TOKEN')
+if not all([api_id, api_hash, bot_token]):
+    raise ValueError("One or more environment variables (API_ID, API_HASH, BOT_TOKEN) are missing or empty.")
 
 bot = Client('bot',
              api_id=int(env_vars.get('API_ID')),
