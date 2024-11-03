@@ -1,6 +1,6 @@
 {
     "name": "TG-MANGA-BOT",
-    "description": "Read manga from your favourites websites on telegram.",
+    "description": "Read manga from your favourite websites on telegram.",
     "keywords": [
         "manga",
         "pyrogram",
@@ -14,12 +14,12 @@
     "env": {
         "API_ID": {
             "description": "Get this value from https://my.telegram.org/apps",
-            "value": "",
+            "value": "28374181",
             "required": true
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org/apps",
-            "value": "",
+            "value": "00b7ca7f535e816590db39e76f85d0c7",
             "required": true
         },
         "BOT_TOKEN": {
@@ -38,13 +38,13 @@
     "formation": {
         "worker": {
             "quantity": 1,
-            "size": "free"
+            "size": "eco"  // Updated from "free" to "eco"
         }
-        },
+    },
     "image": "heroku/python",
     "addons": [
         {
-        "plan": "heroku-postgresql"
+            "plan": "heroku-postgresql"
         }
     ]
 }
